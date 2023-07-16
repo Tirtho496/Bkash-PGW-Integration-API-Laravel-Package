@@ -1,0 +1,16 @@
+{
+    "name": "tirtho496/bkash_pgw",
+    "description": "Package for bkash payment gateway integration",
+    "autoload": {
+        "psr-4": {
+            "Tirtho496\\BkashPgw\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tirtho496",
+            "email": "tirthendu496@gmail.com"
+        }
+    ],
+    "require": {}
+}
