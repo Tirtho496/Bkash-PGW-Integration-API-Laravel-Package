@@ -15,10 +15,10 @@ class Payment {
             'mode' => '0000',
             'payerReference' => ' ',
             'callbackURL' => $website_url.'/bkash/executeCallback',
-            'amount' => $request->amount,
+            'amount' => '',
             'currency' => 'BDT',
             'intent' => 'sale',
-            'merchantInvoiceNumber' => "Inv".Str::random(8)
+            'merchantInvoiceNumber' => ''
         );
 
         $body_data_json = json_encode($body_data);
@@ -33,7 +33,7 @@ class Payment {
         $header =$this->createHeader();
 
         $body = array(
-            'paymentID' => $paymentID
+            'paymentID' => ''
         );
         $body_json=json_encode($body);
 
@@ -91,14 +91,14 @@ class Payment {
         $website_url = URL::to("/");
 
         $body_data = array(
-            'agreementID' => $agreement,
+            'agreementID' => '',
             'mode' => '0001',
             'payerReference' => ' ',
             'callbackURL' => $website_url.'/bkash/callback',
             'amount' => 1,
             'currency' => 'BDT',
             'intent' => 'sale',
-            'merchantInvoiceNumber' => "Inv".Str::random(8) // you can pass here OrderID 
+            'merchantInvoiceNumber' => '' // you can pass here OrderID 
         );
         $body_data_json=json_encode($body_data);
 
@@ -120,10 +120,10 @@ class Payment {
             'mode' => '0011',
             'payerReference' => ' ',
             'callbackURL' => $website_url.'/bkash/callback',
-            'amount' => $request->amount,
+            'amount' => '',
             'currency' => 'BDT',
             'intent' => 'sale',
-            'merchantInvoiceNumber' => "Inv".Str::random(8)
+            'merchantInvoiceNumber' => ''
         );
         $body_data_json=json_encode($body_data);
 
@@ -263,7 +263,7 @@ class Payment {
         $header =$this->createHeader();
 
         $body_data = array(
-            'trxID' => $request->trx,
+            'trxID' => '',
         );
         $body_data_json=json_encode($body_data);
 
