@@ -5,6 +5,7 @@ namespace Tirtho496\Bkash_pgw;
 use Illuminate\Support\Facades\Http;
 
 class Payment {
+    //replace with live url from bkash credentials
     public $base_url = "https://tokenized.sandbox.bka.sh/v1.2.0-beta";
 
     public function createAgreement(Request $request)
