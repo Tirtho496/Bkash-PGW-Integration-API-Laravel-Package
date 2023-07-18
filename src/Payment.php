@@ -129,8 +129,6 @@ class Payment {
 
         $response = $this->makeRequest('/tokenized/checkout/create',$header,'POST',$body_data_json);
 
-        $this->order = $this->placeOrder($request);
-
         return redirect((json_decode($response)->bkashURL));
     }
 
