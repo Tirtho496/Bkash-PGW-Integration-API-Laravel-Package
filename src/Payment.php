@@ -44,6 +44,23 @@ class Payment {
 
         return $response;
     }
+    
+    public function cancelAgreement()
+    {
+
+        $header =$this->createHeader();
+
+        $body = array(
+            'agreementID' => ''
+        );
+        $body_json=json_encode($body);
+
+        $response = $this->makeRequest('/tokenized/checkout/agreement/cancel',$header,'POST',$body_json);
+
+        $result = json_encode($response,true);
+
+        return $response;
+    }
 
     public function executeCallback(Request $request)
     {
