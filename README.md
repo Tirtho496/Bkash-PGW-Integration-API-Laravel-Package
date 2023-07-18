@@ -55,3 +55,4 @@ Place your code there to invoke the necessary functions from ```Payment.php``` f
 2. ```queryPayment(paymentID)``` Can be called only when no response is returned from ```executePayment()``` to check the payment status.
 3. ```searchPayment()``` Check for the status of a successful transaction.
 4. ```refundPayment()``` Make a refund for a successfull transaction.
+5. ```cancelAgreement()``` With reference to the agreementID, cancel an existing agreement.
